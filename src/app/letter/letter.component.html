@@ -12,10 +12,7 @@
       <div class="col" [innerHtml]="_returnHtmlFromRichText(text)"></div>
     </div>
     <div class="row mt-3" id="Kontakt">
-      <div
-        class="col"
-        [innerHtml]="_returnHtmlFromRichText(contactNotice)"
-      ></div>
+      <div class="col" [innerHtml]="_returnHtmlFromRichText(contactNotice)"></div>
     </div>
 
     <div class="row align-items-center mt-3">
@@ -38,14 +35,9 @@
     </div>
     <div class="row row mt-5 align-items-start" id="Unterzeichner">
       <ng-template ngFor let-signee [ngForOf]="signees">
-        <app-signee
-          *ngIf="signee && signee?.fields"
-          [name]="signee.fields.name"
-          [logo]="signee.fields.logo"
-          [website]="signee.fields.website"
-          [listOfSigningNames]="signee.fields.listOfSigningNames"
-          class="col-sm-6 col-md-4 mt-3 text-left"
-        >
+        <app-signee *ngIf="signee && signee?.fields" [name]="signee.fields.name" [logo]="signee.fields.logo"
+          [website]="signee.fields.website" [listOfSigningNames]="signee.fields.listOfSigningNames"
+          class="col-sm-6 col-md-4 mt-3 text-left">
         </app-signee>
       </ng-template>
     </div>
