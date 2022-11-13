@@ -14,16 +14,16 @@ export class SignLetterModalComponent implements OnInit {
   faEnvelope = faEnvelope;
 
   form = {};
-  loading: Boolean = false;
+  loading = false;
   errorMessage = '';
 
-  formSubmitted: Boolean = false;
+  formSubmitted = false;
 
-  constructor(private modalService: NgbModal, private http: HttpClient) {}
+  constructor(private modalService: NgbModal, private http: HttpClient) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  open(content) {
+  open(content): void {
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })
       .result.then(
@@ -40,10 +40,10 @@ export class SignLetterModalComponent implements OnInit {
       );
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.loading = true;
     const formData = new FormData();
-    for (var key in this.form) {
+    for (const key in this.form) {
       if (key === 'logo') {
         formData.append('logo', this.form[key]);
       } else {
@@ -54,7 +54,6 @@ export class SignLetterModalComponent implements OnInit {
       .post<any>(environment.mailService.url + '/signee', formData)
       .subscribe({
         next: (data) => {
-          console.log(data);
           this.loading = false;
           this.formSubmitted = true;
           this.errorMessage = '';
@@ -69,10 +68,11 @@ export class SignLetterModalComponent implements OnInit {
       });
   }
 
-  onFileSelect(event) {
+  onFileSelect(event): void {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
-      this.form['logo'] = file;
+      const key = 'logo';
+      this.form[key] = file;
     }
   }
 
