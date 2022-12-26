@@ -1,5 +1,5 @@
 export interface Contact {
-  name: String;
-  email: String;
-  adress: String;
+  name: string;
+  email: string;
+  adress: string;
 }
