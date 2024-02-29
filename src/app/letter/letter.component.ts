@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { ContentfulService } from '../contentful.service';
-import { Signee } from '../signee.interface';
 
 @Component({
   selector: 'app-letter',
@@ -9,11 +8,11 @@ import { Signee } from '../signee.interface';
   styleUrls: ['./letter.component.css'],
 })
 export class LetterComponent implements OnInit {
-  contactNotice: {};
-  text: {};
-  addressant: string;
-  title: string;
-  signees: Signee[];
+  contactNotice;
+  text;
+  addressant;
+  title;
+  signees;
 
   constructor(private contentfulService: ContentfulService) { }
 
