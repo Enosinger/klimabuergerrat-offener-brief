@@ -9,9 +9,9 @@ import { ContentfulService } from '../contentful.service';
   styleUrls: ['./impressum.component.css'],
 })
 export class ImpressumComponent implements OnInit {
-  technicalContacts: Contact[];
-  responsible: Contact;
-  text: {};
+  technicalContacts;
+  responsible;
+  text;
   constructor(private contentfulService: ContentfulService) {
     this.contentfulService.getImpressum().then((impressum) => {
       impressum.fields.verantwortlich

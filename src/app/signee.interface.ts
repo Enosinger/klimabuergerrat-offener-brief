@@ -1,8 +1,11 @@
-import { Logo } from './logo.interface';
+import { EntryFieldTypes } from 'contentful';
 
-export interface Signee {
-  name: string;
-  website: string;
-  logo: Logo;
-  listOfSigningNames: string;
-}
+export type SigneeEntrySkeleton = {
+  contentTypeId: 'signee';
+  fields: {
+    name: EntryFieldTypes.Text;
+    website: EntryFieldTypes.Text;
+    logo: EntryFieldTypes.AssetLink;
+    listOfSigningNames: EntryFieldTypes.Text;
+  };
+};

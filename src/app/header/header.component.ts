@@ -8,9 +8,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() title: string;
-  phases: string[] = ['Loading ...', 'Loading ...', 'Loading ...'];
-  numberOfActivePhase: number;
+  @Input() title;
+  phases : string[] | any = ['Loading ...', 'Loading ...', 'Loading ...'] ;
+  numberOfActivePhase;
   faArrowRight = faArrowRight;
   closingNotice: {};
   constructor(private contentfulService: ContentfulService) { }
