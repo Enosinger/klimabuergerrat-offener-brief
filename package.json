@@ -29,7 +29,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-bootstrap/ng-bootstrap": "^13.1.0",
     "bootstrap": "^4.5.2",
-    "contentful": "^9.1.12",
+    "contentful": "^10.6.7",
     "express": "^4.18.2",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",

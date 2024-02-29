@@ -16,25 +16,25 @@ export class ContentfulService {
 
   getLetter(): Promise<Entry<any>> {
     return this.contentfulClient
-      .getEntries({ 'sys.id': '2aDDbb4AjEQdCo0IW7AnLm', include: 1 })
-      .then((res) => res.items[0]);
+      .getEntry('2aDDbb4AjEQdCo0IW7AnLm')
+      .then((res) => res);
   }
 
   getImpressum(): Promise<Entry<any>> {
     return this.contentfulClient
-      .getEntries({ 'sys.id': '1RjJ8ucJJIekoeZ6Tz1ZLH', include: 1 })
-      .then((res) => res.items[0]);
+      .getEntry('1RjJ8ucJJIekoeZ6Tz1ZLH')
+      .then((res) => res);
   }
 
   getDataprivacy(): Promise<Entry<any>> {
     return this.contentfulClient
-      .getEntries({ 'sys.id': '4rC21AGeBowVcfQKLnwBPk', include: 1 })
-      .then((res) => res.items[0]);
+      .getEntry('4rC21AGeBowVcfQKLnwBPk')
+      .then((res) => res);
   }
 
   getProgressbar(): Promise<Entry<any>> {
     return this.contentfulClient
-      .getEntries({ 'sys.id': '1YkTzVK4KBzfmsMyBqKSo8' })
-      .then((res) => res.items[0]);
+      .getEntry('1YkTzVK4KBzfmsMyBqKSo8')
+      .then((res) => res);
   }
 }
