@@ -4,16 +4,28 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from 'src/environments/environment';
 
+interface formInterface {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+  logo?: string;
+  listOfSigningNames?;
+  website?;
+  confirmationCheck?;
+  organisation?;
+}
 @Component({
   selector: 'app-sign-letter-modal',
   templateUrl: './sign-letter-modal.component.html',
   styleUrls: ['./sign-letter-modal.component.css'],
 })
 export class SignLetterModalComponent implements OnInit {
+
   closeResult: string;
   faEnvelope = faEnvelope;
-
-  form = {};
+  formModal: any;
+  form: formInterface = {}
   loading = false;
   errorMessage = '';
 
@@ -21,7 +33,9 @@ export class SignLetterModalComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private http: HttpClient) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+  }
 
   open(content): void {
     this.modalService
