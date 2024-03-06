@@ -13,12 +13,6 @@ export class DataprivacyComponent implements OnInit {
   text: {};
   introductoryParagraph: string;
   title: string;
-  contactMail: {
-    fields: {
-      text: string;
-      mailadress: string;
-    };
-  };
 
   constructor(private contentfulService: ContentfulService) { }
 
@@ -28,7 +22,6 @@ export class DataprivacyComponent implements OnInit {
       if (dataprivacy.fields.titel) { this.title = dataprivacy.fields.titel; }
       if (dataprivacy.fields.text) { this.text = dataprivacy.fields.text; }
       if (dataprivacy.fields.einleitendeFormulierung) { this.introductoryParagraph = dataprivacy.fields.einleitendeFormulierung; }
-      if (dataprivacy.fields.contactMail) { this.contactMail = dataprivacy.fields.contactMail; }
     });
   }
 
