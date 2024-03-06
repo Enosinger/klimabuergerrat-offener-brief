@@ -3,7 +3,6 @@
 ## Supported Versions
 
 Because this is a volunteer project, we do not offer official supported versions.
-But we do our best to serve and assist the website of this project: [klima-rat.org](https://klima-rat.org)
 
 ## Reporting a Vulnerability
 
