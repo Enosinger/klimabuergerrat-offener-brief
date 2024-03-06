@@ -27,17 +27,5 @@
   </div>
   <div id="Datenschutz-Text" class="row mt-3">
     <div class="col" [innerHtml]="_returnHtmlFromRichText(text)"></div>
-    <div class="col-12">
-      <a
-        *ngIf="
-          contactMail &&
-          contactMail.fields.mailadress &&
-          contactMail.fields.text
-        "
-        [href]="'mailto://' + contactMail.fields.mailadress"
-        disabled
-        >{{ contactMail.fields.text }}</a
-      >
-    </div>
   </div>
 </div>
