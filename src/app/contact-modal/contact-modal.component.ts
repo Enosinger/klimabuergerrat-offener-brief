@@ -55,7 +55,7 @@ export class ContactModalComponent implements OnInit {
                     this.loading = false;
                     console.error(error);
                     this.errorMessage =
-                        'Deine Nachricht konnte nicht übermittelt werden. Bitte versuche es später noch einmal oder wende dich direkt an kontakt@klima-rat.org. Vielen Dank für dein Verständnis.';
+                        'Deine Nachricht konnte nicht übermittelt werden. Bitte versuche es später noch einmal oder wende dich direkt an info@klimamitbestimmung.de. Vielen Dank für dein Verständnis.';
                 },
             });
     }
