@@ -10,7 +10,7 @@ export const environment = {
     accessToken: 'ecQ2l4UMTYi1MU3Szr2iNLep8Ak_pNp5i3Nxe1qU3VA',
   },
   mailService: {
-    url: 'https://open-letter-mailer.herokuapp.com'
+    url: 'https://offener-brief-br-ernaehrung-be-222c12c442c4.herokuapp.com'
   }
 };
 
