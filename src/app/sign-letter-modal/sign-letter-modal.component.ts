@@ -77,7 +77,7 @@ export class SignLetterModalComponent implements OnInit {
           this.loading = false;
           console.error(error);
           this.errorMessage =
-            'Deine Zeichnung konnte nicht übermittelt werden. Versuche es später noch einmal oder wende direkt an kontakt@klima-rat.org. Vielen Dank für Dein Verständnis.';
+            'Deine Zeichnung konnte nicht übermittelt werden. Versuche es später noch einmal oder wende direkt an info@klimamitbestimmung.de. Vielen Dank für Dein Verständnis.';
         },
       });
   }
