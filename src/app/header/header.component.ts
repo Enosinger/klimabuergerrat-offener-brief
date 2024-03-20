@@ -12,14 +12,14 @@ export class HeaderComponent implements OnInit {
   phases: string[] = ['Loading ...', 'Loading ...', 'Loading ...'];
   numberOfActivePhase: number;
   faArrowRight = faArrowRight;
-  closingNotice: {};
+  notice: {};
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
     this.contentfulService.getProgressbar().then((response) => {
       if (response.fields.phases) { this.phases = response.fields.phases; }
       if (response.fields.numberOfActivePhase) { this.numberOfActivePhase = response.fields.numberOfActivePhase; }
-      if (response.fields.closingNotice) { this.closingNotice = response.fields.closingNotice; }
+      if (response.fields.closingNotice) { this.notice = response.fields.closingNotice; }
     });
   }
 
