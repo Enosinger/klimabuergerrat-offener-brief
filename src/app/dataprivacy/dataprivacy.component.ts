@@ -4,9 +4,10 @@ import { Contact } from '../contact.interface';
 import { ContentfulService } from '../contentful.service';
 
 @Component({
-  selector: 'app-dataprivacy',
-  templateUrl: './dataprivacy.component.html',
-  styleUrls: ['./dataprivacy.component.css'],
+    selector: 'app-dataprivacy',
+    templateUrl: './dataprivacy.component.html',
+    styleUrls: ['./dataprivacy.component.css'],
+    standalone: false
 })
 export class DataprivacyComponent implements OnInit {
   responsible: Contact | any;

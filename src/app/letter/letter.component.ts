@@ -3,9 +3,10 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { ContentfulService } from '../contentful.service';
 
 @Component({
-  selector: 'app-letter',
-  templateUrl: './letter.component.html',
-  styleUrls: ['./letter.component.css'],
+    selector: 'app-letter',
+    templateUrl: './letter.component.html',
+    styleUrls: ['./letter.component.css'],
+    standalone: false
 })
 export class LetterComponent implements OnInit {
   contactNotice;
