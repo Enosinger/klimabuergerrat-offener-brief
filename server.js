@@ -17,15 +17,22 @@ function requireHTTPS(req, res, next) {
 // Use the function on the express app
 app.use(requireHTTPS);
 
-app.use(
-  express.static(path.join(__dirname, "dist", "klimabuergerrat-offener-brief"))
-);
+app.use(express.static(path.join("dist", "klimabuergerrat-offener-brief")));
 
 app.get("/*", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "dist", "klimabuergerrat-offener-brief", "index.html")
+    path.join("dist", "klimabuergerrat-offener-brief", "index.html")
   );
 });
+
+console.log(
+  "Serving static files from:",
+  path.join("dist", "klimabuergerrat-offener-brief")
+);
+console.log(
+  "Serving index.html from:",
+  path.join("dist", "klimabuergerrat-offener-brief", "index.html")
+);
 
 // Serve the express app on the port configured in the env variables - or on 8080 if not specified
 app.listen(process.env.PORT || 8080);
