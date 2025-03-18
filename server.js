@@ -18,7 +18,8 @@ app.use(requireHTTPS);
 const distPath = path.join(
   process.cwd(),
   "dist",
-  "klimabuergerrat-offener-brief"
+  "klimabuergerrat-offener-brief",
+  "browser"
 );
 console.log("Resolved dist path:", distPath);
 app.use(express.static(distPath));
