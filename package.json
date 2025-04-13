@@ -30,7 +30,7 @@
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "bootstrap": "^4.5.2",
     "contentful": "^10.6.7",
-    "express": "^4.18.2",
+    "express": "^4.21.0",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
