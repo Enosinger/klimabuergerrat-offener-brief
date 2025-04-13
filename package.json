@@ -28,7 +28,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^5.0.0",
     "contentful": "^10.6.7",
     "express": "^4.21.0",
     "path": "^0.12.7",
