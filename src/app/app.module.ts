@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,27 +21,20 @@ import { ContentfulService } from './contentful.service';
 // Import Ng Bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    BtnScrollToTopComponent,
-    LetterComponent,
-    SigneeComponent,
-    DataprivacyComponent,
-    ImpressumComponent,
-    SignLetterModalComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    HttpClientModule,
-    FontAwesomeModule,
-  ],
-  providers: [ContentfulService],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        BtnScrollToTopComponent,
+        LetterComponent,
+        SigneeComponent,
+        DataprivacyComponent,
+        ImpressumComponent,
+        SignLetterModalComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        FontAwesomeModule], providers: [ContentfulService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

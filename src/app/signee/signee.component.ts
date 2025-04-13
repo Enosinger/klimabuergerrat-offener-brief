@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Logo } from '../logo.interface';
 
 @Component({
-  selector: 'app-signee',
-  templateUrl: './signee.component.html',
-  styleUrls: ['./signee.component.css'],
+    selector: 'app-signee',
+    templateUrl: './signee.component.html',
+    styleUrls: ['./signee.component.css'],
+    standalone: false
 })
 export class SigneeComponent implements OnInit {
   @Input() listOfSigningNames: string;

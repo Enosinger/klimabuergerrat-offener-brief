@@ -5,9 +5,10 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-sign-letter-modal',
-  templateUrl: './sign-letter-modal.component.html',
-  styleUrls: ['./sign-letter-modal.component.css'],
+    selector: 'app-sign-letter-modal',
+    templateUrl: './sign-letter-modal.component.html',
+    styleUrls: ['./sign-letter-modal.component.css'],
+    standalone: false
 })
 export class SignLetterModalComponent implements OnInit {
   closeResult: string;

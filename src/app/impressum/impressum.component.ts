@@ -4,9 +4,10 @@ import { Contact } from '../contact.interface';
 import { ContentfulService } from '../contentful.service';
 
 @Component({
-  selector: 'app-impressum',
-  templateUrl: './impressum.component.html',
-  styleUrls: ['./impressum.component.css'],
+    selector: 'app-impressum',
+    templateUrl: './impressum.component.html',
+    styleUrls: ['./impressum.component.css'],
+    standalone: false
 })
 export class ImpressumComponent implements OnInit {
   technicalContacts;
