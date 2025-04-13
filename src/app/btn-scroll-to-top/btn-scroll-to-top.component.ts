@@ -1,9 +1,10 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
 @Component({
-  selector: 'app-btn-scroll-to-top',
-  templateUrl: './btn-scroll-to-top.component.html',
-  styleUrls: ['./btn-scroll-to-top.component.css'],
+    selector: 'app-btn-scroll-to-top',
+    templateUrl: './btn-scroll-to-top.component.html',
+    styleUrls: ['./btn-scroll-to-top.component.css'],
+    standalone: false
 })
 export class BtnScrollToTopComponent implements OnInit {
   windowScrolled: boolean;
