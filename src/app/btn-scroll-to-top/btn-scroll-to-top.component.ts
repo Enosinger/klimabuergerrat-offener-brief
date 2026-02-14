@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, OnInit, Inject, HostListener } from '@angular/core';
+
+import { Component, OnInit, Inject, HostListener, DOCUMENT } from '@angular/core';
 @Component({
     selector: 'app-btn-scroll-to-top',
     templateUrl: './btn-scroll-to-top.component.html',
