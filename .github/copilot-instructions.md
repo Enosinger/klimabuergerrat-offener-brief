@@ -72,7 +72,6 @@ ng build --configuration=production  # Optimized prod build
 npm test              # Unit tests via Karma
 npm run test:prod     # Headless Chrome tests (CI-friendly)
 ng e2e                # End-to-end tests via Protractor
-ng lint               # TSLint code style checks
 ```
 
 ### Environment Configuration
