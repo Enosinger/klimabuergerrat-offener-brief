@@ -6,7 +6,7 @@
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
-    "test:prod": "ng test --browsers=ChromeHeadless --watch=false",
+    "test:prod": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build"
@@ -38,19 +38,16 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^21.0.3",
     "@angular-devkit/build-angular": "^20.3.18",
     "@angular/cli": "^20.3.18",
     "@angular/compiler-cli": "^20.3.18",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.0.0",
     "enhanced-resolve": "^3.3.0",
-    "karma": "^6.4.4",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage-istanbul-reporter": "^3.0.3",
-    "karma-jasmine": "^4.0.1",
-    "karma-jasmine-html-reporter": "^1.7.0",
-    "karma-remap-istanbul": "^0.6.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jest-preset-angular": "^16.1.4",
     "ts-node": "~8.3.0"
   }
 }
