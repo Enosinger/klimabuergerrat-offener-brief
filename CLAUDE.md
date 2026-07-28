@@ -67,3 +67,33 @@ The frontend deploys to the Heroku app **`open-letter-frontend`**, live at
   step, and Heroku deploys independently of whether CI passed.
 - Roll back a bad release without touching git:
   `heroku releases:rollback --app open-letter-frontend`.
+
+## Filing issues for deferred work
+
+When something surfaces that is worth tackling another time — out of scope for the current task,
+but real — **spawn a background subagent to file a GitHub issue for it.** Do not just mention it in
+the response and move on; chat observations get lost, issues do not. This is standing
+authorization to create issues in this repo: do not stop and ask first, but always report what was
+filed, with a link.
+
+This matters here specifically because merging to `master` auto-deploys with no gate (see
+Deployment above), so a known-but-unrecorded problem can ship silently.
+
+**When it applies.** The bar is a concrete consequence, not a code smell. File for untested
+critical paths, known regressions, security gaps, wrong documentation, and confirmed TODOs. Do not
+file for style nits, speculative refactors, or anything fixable inline in under a minute — just do
+those. Over-firing turns the tracker into noise, which defeats the purpose.
+
+**How to do it well** — the bar is set by
+[#100](https://github.com/Enosinger/klimabuergerrat-offener-brief/issues/100), not a one-line stub:
+
+- **Verify before filing.** Run the test, the coverage report, whatever produces the actual
+  numbers. #100 was worth filing because running the coverage report revealed
+  `sign-letter-modal.component.ts` at 0% with no spec file; the 35% headline alone would have
+  produced a far vaguer issue.
+- **Lead with data**: file paths, line numbers, real measurements.
+- **State the production consequence**, and how it would be noticed — or not.
+- **Propose a scoped checklist**, and name what is explicitly **out of scope** so it does not
+  sprawl.
+- **Brief the agent cold.** It cannot see the conversation; hand it every path, number, and reason
+  it needs.
