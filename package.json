@@ -13,6 +13,9 @@
     "heroku-postbuild": "ng build"
   },
   "private": true,
+  "overrides": {
+    "postcss": "^8.5.24"
+  },
   "dependencies": {
     "@angular-devkit/schematics": "^20.3.18",
     "@angular/animations": "^20.3.18",
