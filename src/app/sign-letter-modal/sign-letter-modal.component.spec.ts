@@ -86,6 +86,7 @@ describe('SignLetterModalComponent', () => {
     });
 
     it('on error sets the German error message, leaves formSubmitted false and resets loading', () => {
+      const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
       component.form = { organisation: 'Test Org' };
 
       component.onSubmit();
@@ -93,6 +94,7 @@ describe('SignLetterModalComponent', () => {
       const req = httpMock.expectOne(signeeUrl);
       req.flush('failure', { status: 500, statusText: 'Server Error' });
 
+      consoleError.mockRestore();
       expect(component.formSubmitted).toBe(false);
       expect(component.loading).toBe(false);
       expect(component.errorMessage).toBe(
