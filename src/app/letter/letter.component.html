@@ -21,23 +21,26 @@
     <div class="row align-items-center mt-3">
       <div class="col-12 align-self-center">
         <h4 style="margin-bottom: 0">
-          <span *ngIf="signees?.length">{{ signees.length }}</span>
+          @if (signees?.length) {
+            <span>{{ signees.length }}</span>
+          }
           Organisationen haben unterzeichnet.
         </h4>
       </div>
     </div>
     <div class="row row mt-5 align-items-start" id="Unterzeichner">
-      <ng-template ngFor let-signee [ngForOf]="signees">
-        <app-signee
-          *ngIf="signee && signee?.fields"
-          [name]="signee.fields.name"
-          [logo]="signee.fields.logo"
-          [website]="signee.fields.website"
-          [listOfSigningNames]="signee.fields.listOfSigningNames"
-          class="col-sm-6 col-md-4 mt-3 text-left"
-        >
-        </app-signee>
-      </ng-template>
+      @for (signee of signees; track signee) {
+        @if (signee && signee?.fields) {
+          <app-signee
+            [name]="signee.fields.name"
+            [logo]="signee.fields.logo"
+            [website]="signee.fields.website"
+            [listOfSigningNames]="signee.fields.listOfSigningNames"
+            class="col-sm-6 col-md-4 mt-3 text-left"
+            >
+          </app-signee>
+        }
+      }
     </div>
   </div>
 </div>

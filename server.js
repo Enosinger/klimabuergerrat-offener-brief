@@ -19,12 +19,12 @@ const distPath = path.join(
   process.cwd(),
   "dist",
   "klimabuergerrat-offener-brief",
-  "browser"
+  "browser",
 );
 console.log("Resolved dist path:", distPath);
 app.use(express.static(distPath));
 
-app.get("/*", function (req, res) {
+app.get("/{*path}", function (req, res) {
   const indexPath = path.join(distPath, "index.html");
   console.log("Resolved index.html path:", indexPath);
   res.sendFile(indexPath);
